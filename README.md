@@ -1,7 +1,7 @@
 # Rails Kickoff – Bootstrap
 A rapid Rails 6 application template for personal use. This particular template utilizes bootstrap a utility-first CSS framework for rapid UI development.
 
-Tailwind depends on Webpack so this also comes bundled with [webpacker](https://github.com/rails/webpacker) support.
+Bootstrap depends on Webpack so this also comes bundled with [webpacker](https://github.com/rails/webpacker) support.
 
 Inspired heavily by [justalever](https://github.com/justalever/kickoff_tailwind). thank you for your repos.
 
