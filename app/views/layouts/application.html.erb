@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExampleTemplate</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if ["public"].include?(controller.controller_name) %>
+      <header class="sticky-top mb-5">
+        <%= render "layouts/nav/public" %>
+        <div class="contrainer mt-3">
+         <%= yield %> 
+        </div>
+      </header>
+    <% else %>
+      <%= render "layouts/nav/dashboard" %>
+      <div class="container-fluid">
+        <div class="row">
+          <%= render "layouts/nav/sidebar" %>
+          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <%= yield %>
+          </main>
+        </div>
+      </div> 
+    <% end %>
+  </body>
+</html>
